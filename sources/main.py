@@ -145,7 +145,7 @@ class MainWindow(QMainWindow):
             msg.setText("      FATAL ERROR      ")
             msg.setInformativeText(
                 "no WAV Files found, program stopped")
-            msg.setWindowTitle("MISSION IMPOSSIBLE")
+            msg.setWindowTitle("FATAL ERROR")
             msg.exec_()
             exit(0)
 

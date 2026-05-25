@@ -4,6 +4,7 @@ Created on Feb 24 2024
 #@author: scharfetter_admin
 """
 from operator import truediv
+from pathlib import Path
 
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
@@ -258,7 +259,7 @@ class playrec_worker(QObject):
                     self.playfile = newfile
                     position = 0
 
-                if '.wav' in fileparam['nextfilename']:
+                if '.wav' in fileparam['nextfilename'] and Path(self.playfile).is_file():
                     fileparam = WAVheader_tools().get_sdruno_header(self.playfile)
                 else:
                     break

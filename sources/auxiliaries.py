@@ -195,7 +195,7 @@ class auxiliaries():
         msg.setIcon(QMessageBox.Critical)
         msg.setText("FATAL ERROR")
         msg.setInformativeText(str(errortext))
-        msg.setWindowTitle("MISSION IMPOSSIBLE")
+        msg.setWindowTitle("FATAL ERROR")
         msg.exec_()
         print('EXIT')
 

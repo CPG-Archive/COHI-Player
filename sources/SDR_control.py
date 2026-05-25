@@ -276,7 +276,7 @@ class SDR_control(QObject):
             msg.setText("ignoring command")
             msg.setInformativeText(
                               "No Connection to STEMLAB or STEMLAB OS is down")
-            msg.setWindowTitle("MISSION IMPOSSIBLE")
+            msg.setWindowTitle("FATAL ERROR")
             msg.exec_()
             return
         msg = QMessageBox()
