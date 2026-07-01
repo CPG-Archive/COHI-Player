@@ -118,7 +118,7 @@ class MainWindow(QMainWindow):
         # Add handlers to the logger
         self.logger.addHandler(warning_handler)
         self.logger.addHandler(debug_handler)
-        self.logger.debug('Init logger in playrec  reached')
+        #self.logger.debug('Init logger in playrec  reached')
 
 
 
@@ -281,16 +281,16 @@ class MainWindow(QMainWindow):
         :param value: error description which is to be displayed in the errormessage
         :type value: str
         """
-        self.logger.error(str(value))
+        #self.logger.error(str(value))
         try:
-            self.logger.error(str(value))
+        #    self.logger.error(str(value))
             auxi.standard_errorbox(str(value))
             exit(0)
         except:
             if str(value) == "None":
                 value = "unknown error, maybe the internet connection was required and could not be established. Please check."
             auxi.standard_errorbox(str(value))
-            self.logger.error(str(value))
+        #    self.logger.error(str(value))
             self.cb_Butt_STOP()
 
     def execute_this_fn(self, progress_callback):
