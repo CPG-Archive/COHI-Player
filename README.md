@@ -74,7 +74,7 @@ python maín.py
 
 The operation of COHI-Player is very simple and almost self-explaining:
 
-![main01](https://github.com/COHI-Player/blob/master/www/COHI-Player.jpg)
+![main01](https://github.com/CPG-Archive/COHI-Player/blob/master/www/COHI-Player.jpg)
 
 After starting, the COHI-Player starts immediately with playing the first spectrum file found in the directories indicated by parameter 'filename' and 'filename2'. All valid spectrum files are queued up and will be played endlessly according to their ascending order of their directory/filename. Spectrum files can be either segmented in 2 GB pieces or be combined in one larger file. In any case, the filename of large one file spectrum or the first part of any file sequence must be named as [any name]_0.wav.
 
