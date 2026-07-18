@@ -1,4 +1,5 @@
 address: 192.168.178.96
-filename: i:\
-filename2: h:\COHIRADIA
+filename: /media/pi
+filename2: /home/pi/COHIRADIA/WAV
 shutdown: false
+autovol: 1
