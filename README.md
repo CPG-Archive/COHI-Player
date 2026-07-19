@@ -29,21 +29,22 @@ shutdown: false
 autovol: 1
 ```
 Explanation:
-address: IP address of STEMlab board, must be correct for fixed IP configuration mode, otherwise will be updated automatically with first found STEMlab in the network
 
-filename: put here the highest directory where COHI-Player shall search for spectrum wav files which can also be located in any subfolder beyond, recommendation: use the USB directory /media/pi
+`address`: IP address of STEMlab board, must be correct for fixed IP configuration mode, otherwise will be updated automatically with first found STEMlab in the network
 
-filename2: second option for a high-level directory where COHI-Player shall search for spectrum wav files which can also be located in any subfolder beyond, recommendation: use a directory in the SD card, e. g.  directory /home/pi/COHIRADIA/WAV
+`filename`: put here the highest directory where COHI-Player shall search for spectrum wav files which can also be located in any subfolder beyond, recommendation: use the USB directory /media/pi
 
-shutdown: definition of the actions after pressing the 'shutdown' button: true: both the STEMlab and the RaspberryPi will be shut down, false only STEMlab will be shut down
+`filename2`: second option for a high-level directory where COHI-Player shall search for spectrum wav files which can also be located in any subfolder beyond, recommendation: use a directory in the SD card, e. g.  directory /home/pi/COHIRADIA/WAV
 
-autovol: level adjust for the wav file
+`shutdown`: definition of the actions after pressing the 'shutdown' button: true: both the STEMlab and the RaspberryPi will be shut down, false only STEMlab will be shut down
+
+`autovol`: level adjust for the wav file
 
 6) run COHI-Player with
 ```bash
 python3 main.py
 ```
-There is a fully configured image (OS and COHI-Player) for usage with Raspberry Pi 4 and attached 3.5' display board on [COHIRADIA](https://www.cohiradia.org/)
+There are fully configured images (OS and COHI-Player) for usage with Raspberry Pi 4/5 and attached 3.5" display board and Raspberry Pi 5 with 7" display on [COHIRADIA](https://www.cohiradia.org/de/docs/getting_started/installation/raspberry-pi-stemlab-linux-cohi-player-mini/).
   
 
 ## Using Linux OS or Windows on PC:
@@ -78,6 +79,6 @@ The operation of COHI-Player is very simple and almost self-explaining:
 
 After starting, the COHI-Player starts immediately with playing the first spectrum file found in the directories indicated by parameter 'filename' and 'filename2'. All valid spectrum files are queued up and will be played endlessly according to their ascending order of their directory/filename. Spectrum files can be either segmented in 2 GB pieces or be combined in one larger file. In any case, the filename of large one file spectrum or the first part of any file sequence must be named as [any name]_0.wav.
 
-Thus, it is possible to operate COHI-Player without any manual interaction. In case you want to navigate thru the currently played file you can use the timing slider. The button 'Restart' jumps to the beginning of the current played file. with 'Pause' and 'Continue' you can interrupt or restart the playback at any time.
+Thus, it is possible to operate COHI-Player without any manual interaction. In case you want to navigate thru the currently played file you can use the timing slider. The button 'Restart' jumps to the beginning of the currently playing file. with 'Pause' and 'Continue' you can interrupt or restart the playback at any time.
 
 Pressing the 'Shutdown' button will either shutdown only the Stemlab board or both the STEMlab and the Raspberry Pi depending on the configuration in the 'config_sdr.yaml'.
